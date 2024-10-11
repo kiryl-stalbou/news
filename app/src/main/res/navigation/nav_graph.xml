@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.lasha.mobilenews.ui.onboarding_splash.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_onboarding_splash">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+
+        <action
+            android:id="@+id/action_splashScreenFragment_to_articlesMainFragment"
+            app:destination="@id/articlesMainFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_listInterestsFragment"
+            app:destination="@id/listInterestsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.lasha.mobilenews.ui.sign_in.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action
+            android:id="@+id/action_signInFragment_to_listInterestsFragment"
+            app:destination="@id/listInterestsFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_articlesMainFragment"
+            app:destination="@id/articlesMainFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetForErrorsFragment"
+        android:name="com.lasha.mobilenews.ui.common.ErrorBottomSheetFragment"
+        android:label="BottomSheetForErrorsFragment"
+        tools:layout="@layout/fragment_error_bottom_sheet">
+        <argument
+            android:name="currentError"
+            app:argType="com.lasha.mobilenews.ui.common.Error" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.lasha.mobilenews.ui.onboarding_pager.PagerFragment"
+        android:label="PagerFragment"
+        tools:layout="@layout/fragment_onboarding_pager">
+        <action
+            android:id="@+id/action_pagerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listInterestsFragment"
+        android:name="com.lasha.mobilenews.ui.list_interests.ListInterestsFragment"
+        android:label="ListInterestsFragment"
+        tools:layout="@layout/fragment_sign_in_interests">
+        <action
+            android:id="@+id/action_listInterestsFragment_to_successDialogFragment"
+            app:destination="@id/successDialogFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articlesMainFragment"
+        android:name="com.lasha.mobilenews.ui.articles_main.ArticleMainFragment"
+        android:label="ArticlesFragment"
+        tools:layout="@layout/fragment_article_main">
+        <action
+            android:id="@+id/action_articlesMainFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment"
+            app:enterAnim="@anim/next_to_left"
+            app:exitAnim="@anim/previous_to_left" />
+        <action
+            android:id="@+id/action_articlesMainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_articlesMainFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFilteredFragment"
+        android:name="com.lasha.mobilenews.ui.articles_filtered.ArticleFilteredFragment"
+        android:label="ArticleFilteredFragment"
+        tools:layout="@layout/fragment_article_filtered">
+        <argument
+            android:name="itemClicked"
+            app:argType="com.lasha.mobilenews.ui.models.SubCategoryUiModel" />
+        <action
+            android:id="@+id/action_articleFilteredFragment_to_subcategoriesFragment"
+            app:destination="@id/subcategoriesFragment" />
+        <action
+            android:id="@+id/action_articleFilteredFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="category"
+            app:argType="com.lasha.mobilenews.ui.models.MainCategoryUiModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/subcategoriesFragment"
+        android:name="com.lasha.mobilenews.ui.subctegories.SubcategoriesFragment"
+        android:label="SubcategoriesFragment"
+        tools:layout="@layout/fragment_subcategories">
+        <action
+            android:id="@+id/action_subcategoriesFragment_to_articleFilteredFragment"
+            app:destination="@id/articleFilteredFragment" />
+        <action
+            android:id="@+id/action_subcategoriesFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <argument
+            android:name="category"
+            app:argType="com.lasha.mobilenews.ui.models.MainCategoryUiModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.lasha.mobilenews.ui.categories.CategoriesFragment"
+        android:label="CategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_subcategoriesFragment"
+            app:destination="@id/subcategoriesFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_articlesMainFragment"
+            app:destination="@id/articlesMainFragment"
+            app:enterAnim="@anim/previous_to_right"
+            app:exitAnim="@anim/next_to_right" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="listSubCategoris"
+            app:argType="com.lasha.mobilenews.ui.models.MainCategoryUiModel" />
+    </fragment>
+    <dialog
+        android:id="@+id/successDialogFragment"
+        android:name="com.lasha.mobilenews.ui.success_dialog.SuccessDialogFragment"
+        android:label="SuccessDialogFragment"
+        tools:layout="@layout/fragment_dialog_succcess_finish">
+        <action
+            android:id="@+id/action_successDialogFragment_to_articlesMainFragment"
+            app:destination="@id/articlesMainFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.lasha.mobilenews.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_articlesMainFragment"
+            app:destination="@id/articlesMainFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myInterestsFragment"
+            app:destination="@id/myInterestsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_savedInterestsFragment"
+            app:destination="@id/savedArticlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myInterestsFragment"
+        android:name="com.lasha.mobilenews.ui.my_interests.MyInterestsFragment"
+        android:label="MyInterestsFragment"
+        tools:layout="@layout/fragment_my_interests" />
+    <fragment
+        android:id="@+id/savedArticlesFragment"
+        android:name="com.lasha.mobilenews.ui.saved_articles.SavedArticlesFragment"
+        android:label="SavedInterestsFragment"
+        tools:layout="@layout/fragment_saved_articles">
+        <action
+            android:id="@+id/action_savedArticlesFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.lasha.mobilenews.ui.web_view.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

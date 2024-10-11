@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newsItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:icon="@drawable/ic_outline_article_24"
+        android:title="@string/newstr" />
+    <item
+        android:id="@+id/categoriesItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:icon="@drawable/ic_outline_list_alt_24"
+        android:title="@string/categories" />
+</menu>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@color/orange"
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/mobile_news"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/appbar_textview"
+            app:titleTextColor="@color/white">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleIvAppbar"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginVertical="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:maxWidth="@dimen/dp_48"
+                android:src="@drawable/ic_user_default" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.Material3.AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/dp_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_below="@id/searchEditText"
+                    android:layout_marginHorizontal="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/dp_3">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginVertical="@dimen/dp_3"
+                        android:contentDescription="@string/categories"
+                        android:padding="@dimen/dp_1"
+                        app:chipSpacing="@dimen/dp_3"
+                        app:selectionRequired="false"
+                        app:singleSelection="false" />
+                </HorizontalScrollView>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchEditText"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:background="@drawable/bg_search"
+                    android:hint="@string/search"
+                    android:inputType="text"
+                    android:minHeight="@dimen/dp_48"
+                    android:paddingHorizontal="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_3"
+                    android:shadowColor="@color/color_bottom_sheet"
+                    android:textSize="@dimen/sp_16" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/closeSearchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/searchEditText"
+                    android:layout_alignEnd="@+id/searchEditText"
+                    android:layout_alignBottom="@+id/searchEditText"
+                    android:layout_marginVertical="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/search"
+                    android:minWidth="@dimen/dp_48"
+                    android:minHeight="@dimen/dp_48"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/nothingFoundAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_16"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/nothing_found" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/articlesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_article">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/download_lottie" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/dp_8"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+
+                <include layout="@layout/shimmer_placeholder" />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

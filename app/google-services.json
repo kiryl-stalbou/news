@@ -1,0 +1,128 @@
+{
+  "project_info": {
+    "project_number": "108159191581",
+    "firebase_url": "https://android-team-project-370712-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "android-team-project-370712",
+    "storage_bucket": "android-team-project-370712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108159191581:android:a1509fb753d28aa93e14f4",
+        "android_client_info": {
+          "package_name": "com.lasha.mobilenews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108159191581-052ptmhi83krln056tvlg0g436gtd0qp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "6e519353470b3b0c83a0250cc393dc7d221e667c"
+          }
+        },
+        {
+          "client_id": "108159191581-dbgke0febbbv00uok5k998mso92pc7ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "fecaf215f3760624e94859cc3db3abf98a31a03a"
+          }
+        },
+        {
+          "client_id": "108159191581-ddn77i99fksj0gpfn5ebnvaeqqobod51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "8437afb1943242b7ed62bb84abcc2b3e16194bcd"
+          }
+        },
+        {
+          "client_id": "108159191581-ef5i04e4i05lfrmtcok69lf4k25j2fs0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "abff912c0919c2ad6985a910f5f56da4484942ff"
+          }
+        },
+        {
+          "client_id": "108159191581-g4ntgefrbfs92soqb0gfm6a0va2dop4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "92caeb19abdc1e3dbdc72201ab31afaa36d44ad3"
+          }
+        },
+        {
+          "client_id": "108159191581-j93h8b9lc3bjv3dpc396781f2ecdi39t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "62a9165e8c6a92f2dbfa0f5a2eb180cff95c1752"
+          }
+        },
+        {
+          "client_id": "108159191581-kiqa83lc19erdpfgr5p97c0elkeho5re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "df8b3e2664d56c233126d67878112f9544d37f00"
+          }
+        },
+        {
+          "client_id": "108159191581-ogt4804ukqpcj91s53464kr43o2kfjuu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "536ab136cd2fa016ca57ba230f8a62f51f4b1a02"
+          }
+        },
+        {
+          "client_id": "108159191581-p1pg4un3bfb6mtm8qsjc63p1uh4ik072.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "6dfd2955654b3da1240bd8e5e5f4d8b1f5b5b225"
+          }
+        },
+        {
+          "client_id": "108159191581-rfhga6as2p11ekoadpqi1bdnejbltl05.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "1dad70f73265a0cc99ebeb46883898897fe62499"
+          }
+        },
+        {
+          "client_id": "108159191581-sp1i98c27rs4c81kqbfq474gm4quea6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lasha.mobilenews",
+            "certificate_hash": "0124dcfca0638b4c75585e32ec30bff098c738fc"
+          }
+        },
+        {
+          "client_id": "108159191581-huklkik5cdt8voceogu3tpegbibfei6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvQHH8wE1qZwH-fqyqR2XVzux73qgI-ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108159191581-huklkik5cdt8voceogu3tpegbibfei6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

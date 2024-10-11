@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/articleItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_6"
+    app:cardCornerRadius="@dimen/dp_26"
+    app:cardElevation="@dimen/dp_3"
+    app:strokeColor="@color/orange_dark"
+    app:strokeWidth="@dimen/dp_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/articleTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/sp_20"
+            android:layout_gravity="start"
+            android:textAlignment="gravity"
+            android:textColor="@color/brown_dark"
+            android:layout_marginVertical="@dimen/sp_16"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/articleCategoryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@drawable/bg_categories"
+                android:padding="@dimen/dp_6"
+                android:textAlignment="center"
+                android:textColor="@color/brown_dark"
+                android:textSize="@dimen/sp_14" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/articleSubCategoryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@drawable/bg_categories"
+                android:padding="@dimen/dp_6"
+                android:textAlignment="center"
+                android:textColor="@color/brown_dark"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/articleIv"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/likeBtn"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/baseline_thumb_up_off_alt_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/likesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toEndOf="@id/likeBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dislikesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toEndOf="@id/likesTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/dislikeBtn"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:src="@drawable/baseline_thumb_down_off_alt_24"
+                app:layout_constraintStart_toEndOf="@id/dislikesTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/shareBtn"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginHorizontal="@dimen/sp_16"
+                android:background="@android:color/transparent"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_share"
+                app:layout_constraintEnd_toStartOf="@id/bookmarkBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bookmarkBtn"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginHorizontal="@dimen/sp_16"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_bookmark_unchecked"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

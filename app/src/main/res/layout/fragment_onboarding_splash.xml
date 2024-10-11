@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_on_boarding_splash"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_boarding_splash_icon"/>
+
+    <TextView
+        android:id="@+id/AndroidNews"
+        style="@style/style_roboto_sp_48"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="-15dp"
+        android:textAllCaps="true"
+        android:text="@string/mobile_news" />
+
+</LinearLayout>

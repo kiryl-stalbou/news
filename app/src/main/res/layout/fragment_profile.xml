@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white_rounded_rectangle"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_button"
+        android:minWidth="@dimen/dp_48"
+        android:minHeight="@dimen/dp_48"
+        android:src="@drawable/ic_baseline_arrow_back_dark_blue" />
+
+    <TextView
+        android:id="@+id/your_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/style_roboto_medium_sp_24"
+        android:text="@string/your_profile"
+        android:textAllCaps="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_140"
+        android:layout_marginVertical="@dimen/sp_24"
+        android:src="@drawable/ic_user_default"
+        android:background="@drawable/bg_round_white"
+        android:maxWidth="@dimen/dp_140"
+        android:maxHeight="@dimen/dp_140" />
+
+    <TextView
+        android:id="@+id/fullNameTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/full_name"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fullNameTv"
+        style="@style/profileDetailsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/bg_search" />
+
+    <TextView
+        android:id="@+id/emailTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/e_mail"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emailTv"
+        style="@style/profileDetailsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/bg_search" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/savedArticlesButton"
+            style="@style/profileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/bg_rounded_orange_button"
+            android:text="@string/saved_articles" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/changeInterestsButton"
+            style="@style/profileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/bg_rounded_orange_button"
+            android:text="@string/change_interests" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/bg_rounded_orange_fill_button"
+            android:text="@string/log_out"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

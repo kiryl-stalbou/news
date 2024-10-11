@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/articleItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_6"
+    android:background="@drawable/bg_article"
+    android:backgroundTint="@color/shimmerBackGround"
+    android:paddingHorizontal="@dimen/dp_8">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/articleIv"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginVertical="@dimen/dp_21"
+        android:backgroundTint="@color/shimmerBackGround"
+        android:src="@color/shimmerBackGround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/articleTitleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_21"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@color/shimmerBackGround"
+        android:maxLength="40"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@+id/articleCategoryTv"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarkBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/articleIv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/articleCategoryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginVertical="@dimen/dp_6"
+        android:background="@drawable/bg_categories"
+        android:backgroundTint="@color/shimmerBackGround"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@+id/articleSubCategoryTv"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarkBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/articleIv"
+        app:layout_constraintTop_toBottomOf="@+id/articleTitleTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/articleSubCategoryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_21"
+        android:background="@drawable/bg_categories"
+        android:backgroundTint="@color/shimmerBackGround"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shareBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/articleIv"
+        app:layout_constraintTop_toBottomOf="@+id/articleCategoryTv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bookmarkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_21"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_shimmer_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_21"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_shimmer_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
